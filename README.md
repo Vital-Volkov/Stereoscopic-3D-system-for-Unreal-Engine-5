@@ -12,7 +12,7 @@ How it works:
 
 Just drop the main blueprint Actor rig with 2 Scene Capture cameras into a scene and it should make all other work automatically.  
 It will search View Target in scene and active camera component and attach to it, copy post process settings from it(option) or use their own preset,
-disable render of active parent Scene Camera(via ortho projection hack) for best performance and I got S3D performance in `Optimized` mode same as 2D 85fps in First Person default scene with FullHD i5-12600K RTX2060 which is incredible! :muscle::sunglasses::+1:  
+disable render of active parent Scene Camera(via ortho projection hack) for best performance and I got S3D performance in `Optimized` mode same as Mono3D 85fps in First Person default scene with FullHD i5-12600K RTX2060 which is incredible! :muscle::sunglasses::+1:  
 Render into S3D material shader which makes the required S3D output method from Left and Right view and draw the result to screen as Post Process material in parent Scene Camera.
 Then you can make required S3D settings(100% realistic or Toy effect world) via Panel with pop-up help tips(while hovering cursor on variable names over 1 second) or via keyboard hot keys(easily changeable in project)
 and save as many different profiles as you like and last saved will autoload on next start.
@@ -22,7 +22,7 @@ and just move the cursor away and new values will apply without pressing Enter.
 Here the main runtime settings on the Panel and their keyboard shortcuts:
 
 `Enable S3D` - `Num *`  
-On/Off S3D toggle.
+Turn On S3D or return to default Mono3D scene camera.
 
 `Swap Left-Right View` - `Shift + Num *`  
 If you resize the window in an interlace method or have different left/right filters or color glasses you can always fast swap Left-Right images.
@@ -32,10 +32,10 @@ Render only half X or Y resolutions for S3D output methods like Interlace SideBy
 give advantage only in clearer image in specific output method like interlace where interrow antialiasing cause more blurry image in native resolution but 
 This is a must have future for SideBySide and OverUnder methods where you see the same clear image but have performance boost in my case 65 vs 85fps 31%.
 I have an interlaced S3D monitor LGD2342P but I found the best method is to output as OverUnder via HDMI and set this mode in monitor settings so I have same clear picture
-like in native interlace mode but at 31% faster with performance same as 2D which is incredible!
+like in native interlace mode but at 31% faster with performance same as Mono3D which is incredible!
 
 `VSync`  
-While this is must have option even for 2D to avoid image ugly tearing to horizontal lanes and limit GPU redundant overload(lock frames to monitor Hertz)
+While this is must have option even for Mono3D to avoid image ugly tearing to horizontal lanes and limit GPU redundant overload(lock frames to monitor Hertz)
 this is required for my best OverUnder method as when image moving left/right then lower part of screen delay from upper part and if image for right eye is lower,
 then when you turn or move to right you will see S3D depth become shallower and vise versa so VSync is especially required for OverUnder S3D method but I don't make it enable
 automatically when OverUnder selected and you can see this effect by your own then enable VSync to see differences and just Save it with other profile settings.
@@ -48,7 +48,7 @@ And the main thing is not to overshoot your UserIPD as you get abnormal eye angl
 without optic distortions per eye and can cause discomfort.
 
 `Virtual IPD` - `Ctrl + Num +/-`  
-This is your virtual IPD in 3D game world and can be any size as you like without discomfort from 0(it will look like a 2D gigantic screen or image in space always at max S3D depth)
+This is your virtual IPD in 3D game world and can be any size as you like without discomfort from 0(it will look like a Mono3D gigantic screen or image in space always at max S3D depth)
 to any large numbers as you need(you can set Max limit in project preset). So you can untick from realistic VirtualIPD be same as UserIPD and set VirtualIPD for example lower
 than your real IPD to simulate small creatures(small stereo base) world perception or set it to 10,000mm(100 meters stereo base) as I made while testing and look at
 S3D volumetric clouds many kilometers in size like a toy with a very nice S3D feel. So think about this parameter like S3D perception world size scalar.
@@ -62,7 +62,7 @@ Horizontal FOV in degrees for camera zoom control or just read this from cameras
 
 `Panel Depth` - `Alt + Num +/-`  
 As I made the 3D widget panel in camera full frustum space for both eyes(and as result fully compatible with any S3D output method) so I added Panel Depth also as a separate setting.
-You can set it from 1(always like common 2D UI panels exactly at screen depth) to infinity depth(Min/Max limit can be set in project preset). You can set Min to 0.5 if you like
+You can set it from 1(always like common Mono3D UI panels exactly at screen depth) to infinity depth(Min/Max limit can be set in project preset). You can set Min to 0.5 if you like
 and you get a panel depth feel between you and the screen at half distance to the screen. Any setting different from 1 gives you a wider view of the panel and I add additional edges offset
 so you will not lose edges and get full camera frustum view space for both eyes for panel drag and drop, move to any corner as you like and also save its position with other settings.
 Very large work was done for the S3D panel and I like how it works with any resolution or window size and also with black borders(Aspect Constrain UE5 camera settings with unlocked Window Preserve Aspect in UE5 Project Settings).
@@ -127,7 +127,7 @@ This default FOV will be set if `FOV_Control` is enabled and filed to load at ga
 FOV shouldn't be zero or 180 at planar projection not possible so the adequate limit is from 1 to 179 degrees for example but by default I set more realistic 10 to 170.
 
 `WidgetDepth_ScreenDistanceMult`  
-S3D Control Panel depth by default is the distance from viewpoint to your screen multiplicator so 1 means that the S3D panel will always look like a common 2D panel
+S3D Control Panel depth by default is the distance from viewpoint to your screen multiplicator so 1 means that the S3D panel will always look like a common Mono3D panel
 because it is at screen depth.
 
 `WidgetDepth_ScreenDistanceMult_MinMax`  
