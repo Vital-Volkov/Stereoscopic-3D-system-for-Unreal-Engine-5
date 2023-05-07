@@ -12,9 +12,9 @@ How it works:
 
 Just drop the main blueprint Actor rig with 2 Scene Capture cameras into a scene and it should make all other work automatically.  
 It will search View Target in scene and active camera component and attach to it, copy post process settings from it(option) or use their own preset,
-disable render of active parent Scene Camera(via ortho projection hack) for best performance(I got same performance as 2D in S3D Optimized mode 85fps in example FPS scene FullHD i512600K RTX2060)  
+disable render of active parent Scene Camera(via ortho projection hack) for best performance and I got S3D performance in `Optimized` mode same as 2D 85fps in First Person default scene with FullHD i5-12600K RTX2060 which is incredible! :muscle::sunglasses::+1:  
 Render into S3D material shader which makes the required S3D output method from Left and Right view and draw the result to screen as Post Process material in parent Scene Camera.
-Then you can make required S3D settings(100% realistic or Toy effect world) via Panel with popup tips(while hovering cursor on variable names over 1 second) or via keyboard hot keys(easily changeable in project)
+Then you can make required S3D settings(100% realistic or Toy effect world) via Panel with pop-up help tips(while hovering cursor on variable names over 1 second) or via keyboard hot keys(easily changeable in project)
 and save as many different profiles as you like and last saved will autoload on next start.
 I made autofocus on the control Panel so you can drag the slider or hover cursor on the input fields and scroll the mouse wheel or type numbers from the keyboard
 and just move the cursor away and new values will apply without pressing Enter.
@@ -79,7 +79,7 @@ where one holding last save Slot Name from which autoload on next start and anot
 
 All keyboard shortcuts control keys can be changed in the project as it uses Enhanced Input of UE5.
 
-Here are UE5 project preset variables which can be changed before start and they are all in the S3D Setup group(variables outside this group are calculated at runtime and don't need to change them):
+Here also additional preset variables inside UE5 project which can be changed before start and they are all in the `S3D Setup` group(variables outside this group are calculated at runtime and don't need to change them):
 
 `S3D_EyePriority`  
 An Important setting when you have a shooter with a camera set for Aiming by Right(or Left) eye so you just select the required scene camera eye and go.
@@ -150,10 +150,10 @@ rendering of unnecessary objects. Or you can make a custom hit testing system li
 `Debug`  
 Print or not screen and log messages for S3D main blueprint.
 
-There are also 2 preset variables in the Widget blueprint S3D Setup group:
+There are also 2 preset variables in the Widget blueprint `S3D Setup` group:
 
 `ToolTipDelay`  
-Delay in seconds before the popup tip will appear when mouse hovering on the variable name of the Panel.
+Delay in seconds before the pop-up tip will appear when mouse hovering on the variable name of the Panel.
 
 `Debug`  
 Print or not screen and log messages for S3D Widget blueprint and edge corners.
