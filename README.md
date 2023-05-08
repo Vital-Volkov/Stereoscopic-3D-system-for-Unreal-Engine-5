@@ -11,7 +11,7 @@ Today is my birthday and after 3 month of work with UE5 this release of the comp
 How it works:  
 
 Just drop the main blueprint Actor rig with 2 Scene Capture cameras into a scene and it should make all other work automatically.  
-It will search View Target in scene and active camera component and attach to it, copy post process settings from it(option) or use their own preset,
+S3D system will search `View Target`(Actor with current view rendering) in scene and active camera component and attach to it, copy post process settings from it(option) or use their own preset,
 disable render of active parent Scene Camera(via ortho projection hack) for best performance and I got S3D performance in `Optimized` mode same as Mono3D 85fps in First Person default scene with FullHD i5-12600K RTX2060 which is incredible! :muscle::sunglasses::+1:  
 Render into S3D material shader which makes the required S3D output method from Left and Right view and draw the result to screen as Post Process material in parent Scene Camera.
 Then you can make required S3D settings(100% realistic or Toy effect world) via Panel with pop-up help tips(while hovering cursor on variable names over 1 second) or via keyboard hot keys(easily changeable in project)
