@@ -14,7 +14,6 @@ Unpack ZIP and move the `Stereo3D_VitalVolkov` folder to the `Content` folder of
 
 How it works:  
 
-Just drop the main blueprint Actor rig with 2 Scene Capture cameras into a scene and it should make all other work automatically.  
 S3D system will search `View Target`(Actor with current view rendering) in scene and active camera component and attach to it, copy post process settings from it(option) or use their own preset,
 disable render of active parent scene camera(via ortho projection hack) for best performance and I got S3D performance in `Optimized` mode same as Mono3D 85fps in First Person default scene with FullHD i5-12600K RTX2060 which is incredible! :muscle::sunglasses::+1:  
 Render into S3D material shader which makes the required S3D output method from Left and Right view and draw the result to screen as Post Process material in parent Scene Camera.
