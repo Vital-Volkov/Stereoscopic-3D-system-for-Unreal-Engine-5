@@ -10,12 +10,12 @@ Today is my birthday and after 3 month of work with UE5 this release of the comp
 
 Installation:  
 
-Unpack ZIP and move the `Stereo3D_VitalVolkov` folder to the `Content` folder of any Unreal Engine 5 project and just drag and drop the `S3D_MainBP_DropToScene.uasset` file into a scene and go. :sunglasses:  
+Unpack ZIP and move the `Stereo3D_VitalVolkov` folder to the `Content` folder of any Unreal Engine 5 project and just drag and drop the `S3D_MainBP_DropToScene.uasset` file into a scene and go. :sunglasses:
 
 How it works:  
 
 S3D system will search `View Target`(Actor with current view rendering) in scene and active camera component and attach to it, copy post process settings from it(option) or use their own preset,
-disable render of active parent scene camera(via ortho projection hack) for best performance and I got S3D performance in `Optimize` mode same as Mono3D 85fps in First Person default scene with FullHD i5-12600K RTX2060 which is incredible! :muscle::sunglasses::+1:  
+disable render of active parent scene camera(via ortho projection hack) for best performance and I got S3D performance in `Optimize` mode same as Mono3D 85fps in First Person default scene with FullHD i5-12600K RTX2060, it's incredible! :muscle::sunglasses::+1:  
 Render into S3D material shader which makes the required S3D output method from Left and Right view and draw the result to screen as Post Process material in parent Scene Camera.
 Then you can make required S3D settings(100% realistic or Toy effect world) via Panel with pop-up help tips(while hovering cursor on variable names over 1 second) or via keyboard hot keys(easily changeable in project)
 and save as many different profiles as you like and last saved will autoload on next start.
@@ -31,7 +31,7 @@ Turn On S3D or return to default Mono3D scene camera.
 If you resize the window in an interlace method or have different left/right filters or color glasses you can always fast swap Left-Right images.
 
 `Optimize` - `Alt + Num *`  
-Render only half X or Y resolutions for S3D output methods like Interlace, SideBySide and OverUnder(TopBottom), where half resolution anyway lost so rendering at full resolution give advantage only in clearer image in specific output method like interlace where antialiasing on final S3D interlaced image cause more blur but This is a must have future for SideBySide and OverUnder methods where you see the same clear image but have performance boost in my case 65 vs 85fps 31%. I have an interlaced S3D monitor LGD2342P but I found the best method is to output as OverUnder via HDMI and set this mode in monitor settings so I have same clear picture in `Optimize` mode but at 31% faster with performance same as Mono3D which is incredible!
+Render only half X or Y resolutions for S3D output methods like Interlace, SideBySide and OverUnder(TopBottom), where half resolution anyway lost so rendering at full resolution give advantage only in clearer image in specific output method like interlace where antialiasing on final S3D interlaced image cause more blur but This is a must have future for SideBySide and OverUnder methods where you see the same clear image but have performance boost in my case 65 vs 85fps 31%. I have an interlaced S3D monitor LGD2342P but I found the best method is to output as OverUnder via HDMI and set this mode in monitor settings so I have same clear picture in `Optimize` mode but at 31% faster with performance same as Mono3D, it's incredible!
 
 `VSync`  
 While this is must have option even for Mono3D to avoid image ugly tearing to horizontal lanes and limit GPU redundant overload(lock frames to monitor Hertz)
