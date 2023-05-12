@@ -10,7 +10,8 @@ Today is my birthday and after 3 month of work with UE5 this release of the comp
 
 Installation:  
 
-Unpack ZIP and move the `Stereo3D_VitalVolkov` folder to the `Content` folder of any Unreal Engine 5 project and just drag and drop the `S3D_MainBP_DropToScene.uasset` file into a scene and go. :sunglasses:
+Unpack ZIP and move the `Stereo3D_VitalVolkov` folder to the `Content` folder of any UE5 project and just drag and drop the `S3D_MainBP_DropToScene.uasset` file into a scene and go. :sunglasses:  
+P.S. Don't move the complete GitHub `Stereoscopic-3D-system-for-Unreal-Engine-5-main` folder to the `Content` folder of UE5 or you'll get a compile error.
 
 How it works:  
 
