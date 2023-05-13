@@ -25,6 +25,9 @@ and just move the cursor away and new values will apply without pressing `Enter`
 
 Here the main runtime settings on the Panel and their keyboard shortcuts:
 
+Open-Close S3D Control Panel - `Tab`  
+Opened panel will lock default game controls, so close it after making settings.  
+
 `Enable S3D` - `Num *`  
 Turn On S3D or return to default Mono3D scene camera.
 
