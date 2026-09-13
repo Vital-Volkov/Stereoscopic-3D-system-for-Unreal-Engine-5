@@ -161,11 +161,4 @@ Delay in seconds before the pop-up tip will appear when mouse hovering on the va
 `Debug`  
 Print or not screen and log messages for S3D Widget blueprint and edge corners.
 
-Enjoy and welcome to donate to my crypto wallet:  
-Bitcoin `bc1qf0af260q970f3ryrmlcde62jk4h6zhj08rkkjz`  
-Litecoin `LVHktaDKWkyK96H2vcmvNWYx2nMkcysA2J`  
-Or ask me and I will give you the required donate option.
-
-Best regards,  
-Vitaly Volkov  
-vital.volkov@gmail.com
+## 💰 [Donate](https://donatr.ee/wital)
